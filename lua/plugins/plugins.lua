@@ -80,9 +80,6 @@ local plugins = {
                 "L3MON4D3/LuaSnip",
                 dependencies = "rafamadriz/friendly-snippets",
                 opts = { history = true, updateevents = "TextChanged,TextChangedI" },
-                config = function(_, opts)
-                    require("plugins.configs.others").luasnip(opts)
-                end,
             },
 
             -- autopairing of (){}[] etc
@@ -110,9 +107,6 @@ local plugins = {
                 "hrsh7th/cmp-path",
             },
         },
-        opts = function()
-            return require "plugins.configs.cmp"
-        end,
         config = function(_, opts)
             require("cmp").setup(opts)
         end,
