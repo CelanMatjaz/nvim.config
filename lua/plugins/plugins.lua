@@ -13,7 +13,7 @@ local plugins = {
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
-        keys = { "<leader>", "<c-r>", "<c-w>", '"', "'", "`", "c", "v", "g" },
+        keys = { "<leader>", "<c-r>", "<c-w>", "\"", "'", "`", "c", "v", "g" },
         init = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 300
@@ -35,11 +35,27 @@ local plugins = {
         dependencies = "nvim-tree/nvim-web-devicons"
     },
 
+    -- {
+    --     "zootedb0t/citruszest.nvim",
+    --     lazy = false,
+    --     init = function(_, opts)
+    --         vim.cmd[[colorscheme citruszest]]
+    --     end
+    -- },
+
+    -- {
+    --     "sekke276/dark_flat.nvim",
+    --     lazy = false,
+    --     init = function(_, opts)
+    --         vim.cmd[[colorscheme dark_flat]]
+    --     end
+    -- },
+
     {
-        "nyoom-engineering/oxocarbon.nvim",
+        "fenetikm/falcon",
         lazy = false,
         init = function(_, opts)
-            vim.cmd[[colorscheme oxocarbon]]
+            vim.cmd[[colorscheme falcon]]
         end
     },
 
@@ -113,12 +129,16 @@ local plugins = {
     },
 
     {
-        'numToStr/Comment.nvim',
+        "numToStr/Comment.nvim",
         opts = {
             -- add any options here
         },
         lazy = false,
-    }
+    },
+
+    {
+        "nvim-tree/nvim-tree.lua",
+    },
 
 }
 

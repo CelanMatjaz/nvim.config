@@ -1,13 +1,25 @@
 local mappings = {
-    { { "n" }, "<C-b>", "<cmd> enew <cr>", "Create buffer" },
-    { { "n" }, "<C-x>", "<cmd> bunload <cr>", "Delete buffer" },
-    { { "n" }, "<C-X>", "<cmd> bunload <cr>", "Delete ALL buffers" },
+    { "<C-b>", "<cmd> enew <cr>", { desc = "Create buffer" } },
+    { "<C-x>", "<cmd> bd <cr>", { desc = "Delete buffer" } },
+    { "<C-X>", "<cmd> bunload <cr>", { desc = "Delete ALL buffers" } },
 
-    { { "n" }, "<tab>", "<cmd> bnext <cr>", "Next buffer" },
-    { { "n" }, "<S-tab>", "<cmd> bprevious <cr>", "Previous buffer" },
+    { "<tab>", "<cmd> bnext <cr>", { desc = "Next buffer" } },
+    { "<S-tab>", "<cmd> bprevious <cr>", { desc = "Previous buffer" } },
 
-    { { "n" }, "<c-c>", "<cmd> <esc> <cr>", "Previous buffer" },
-    { { "n" }, "<c-s>", "<cmd> w <cr>", "Previous buffer" },
+    { "<C-c>", "<esc>", { desc = "Exit to normal mode" } , "i"},
+    { "<C-s>", "<cmd> w <cr>", { desc = "Save buffer" } },
+    
+    { "<C-h>", "<Left>", {}, "i" },
+    { "<C-l>", "<Right>", {}, "i" },
+    { "<C-j>", "<Down>", {}, "i" },
+    { "<C-k>", "<Up>", {}, "i" },
+    
+    { "<C-h>", "<C-W>h" },
+    { "<C-l>", "<C-W>l" },
+    { "<C-j>", "<C-W>j" },
+    { "<C-k>", "<C-W>k" },
+
+    { "<C-n>", "<cmd> NvimTreeToggle <cr> " },
 }
 
-require "utils".add_mappings(mappings)
+require "plugins.utils".add_mappings(mappings)

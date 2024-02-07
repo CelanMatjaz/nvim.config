@@ -1,6 +1,12 @@
 local opt = vim.opt
 local g = vim.g
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 opt.laststatus = 3
 opt.showmode = false
 
@@ -40,9 +46,8 @@ opt.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
-require "utils".add_mappings({ { {"n"}, "<leader>m", "<cmd>messages<cr>", "Show messages" } })
-require "utils".load_mappings()
+require "plugins.utils".load_mappings()
 
 require "plugins/init"
