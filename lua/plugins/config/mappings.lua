@@ -14,10 +14,11 @@ local mappings = {
     { "<C-j>", "<Down>", {}, "i" },
     { "<C-k>", "<Up>", {}, "i" },
     
-    { "<C-h>", "<C-W>h" },
-    { "<C-l>", "<C-W>l" },
-    { "<C-j>", "<C-W>j" },
-    { "<C-k>", "<C-W>k" },
+    { "<C-h>", "<cmd> TmuxNavigateLeft <cr>" },
+    { "<C-j>", "<cmd> TmuxNavigateDown <cr>" },
+    { "<C-k>", "<cmd> TmuxNavigateUp <cr>" },
+    { "<C-l>", "<cmd> TmuxNavigateRight <cr>" },
+    { "<c-\\>", "<cmd> TmuxNavigatePrevious <cr>" },
 
     { "<C-n>", "<cmd> NvimTreeToggle <cr> " },
 }

@@ -140,6 +140,10 @@ local plugins = {
         "nvim-tree/nvim-tree.lua",
     },
 
+    {
+        "christoomey/vim-tmux-navigator",
+    },
+
 }
 
 return plugins
