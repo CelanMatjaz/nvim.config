@@ -5,8 +5,10 @@ require "plugins.setup.lsp_config"
 require "plugins.setup.treesitter"
 require "plugins.setup.bufferline"
 require "plugins.setup.nvim_tree"
+require "plugins.setup.dap"
 
-require "Comment".setup{}
+require "Comment".setup {}
+require "dapui".setup {}
 
 require "plugins.config.mappings" -- Add custom mappings
 

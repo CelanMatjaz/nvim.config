@@ -43,21 +43,21 @@ local plugins = {
     --     end
     -- },
 
-    -- {
-    --     "sekke276/dark_flat.nvim",
-    --     lazy = false,
-    --     init = function(_, opts)
-    --         vim.cmd[[colorscheme dark_flat]]
-    --     end
-    -- },
-
     {
-        "fenetikm/falcon",
+        "sekke276/dark_flat.nvim",
         lazy = false,
         init = function(_, opts)
-            vim.cmd[[colorscheme falcon]]
+            vim.cmd[[colorscheme dark_flat]]
         end
     },
+
+    -- {
+    --     "fenetikm/falcon",
+    --     lazy = false,
+    --     init = function(_, opts)
+    --         vim.cmd[[colorscheme falcon]]
+    --     end
+    -- },
 
     {
         "stevearc/oil.nvim",
@@ -142,6 +142,23 @@ local plugins = {
 
     {
         "christoomey/vim-tmux-navigator",
+    },
+
+    -- Debugging
+    {
+        "mfussenegger/nvim-dap",
+    },
+
+    {
+        "rcarriga/nvim-dap-ui",
+    },
+
+    {
+        "ldelossa/nvim-dap-projects",
+        init = function()
+            require "nvim-dap-projects".config_paths = { ".nvim/nvim-dap.lua" }
+            require "nvim-dap-projects".search_project_config()
+        end
     },
 
 }
