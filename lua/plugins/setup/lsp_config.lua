@@ -1,16 +1,31 @@
 local lspconfig = require("lspconfig")
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Server configures
-
+-- Server configs
 lspconfig.lua_ls.setup {}
 lspconfig.csharp_ls.setup {}
 lspconfig.cssls.setup{}
 lspconfig.html.setup{}
 lspconfig.clangd.setup {}
+lspconfig.gopls.setup {}
+
+lspconfig.emmet_ls.setup {
+    apabilities = capabilities,
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+    init_options = {
+        html = {
+            options = {
+            -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+            ["bem.enabled"] = true,
+            },
+        },
+    }
+}
 
 require "plugins.utils".add_mappings({
     { "<leader>cs", "<cmd> ClangdSwitchSourceHeader <cr>", { desc = "Switch source/header" } },
-}, "clangd")
+})
 
 require "plugins.utils".add_mappings({
     { "lf", vim.diagnostic.open_float, { desc = "LSP diagnostics" } },
@@ -25,7 +40,7 @@ require "plugins.utils".add_mappings({
     { "K", vim.lsp.buf.hover, { desc = "LSP hover" } },
     { "gi", vim.lsp.buf.implementation, { desc = "LSP implementation" } },
     { "D", vim.lsp.buf.hover, { desc = "LSP type definition" } },
-}, "telescope")
+})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
