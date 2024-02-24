@@ -5,8 +5,8 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Server configs
 lspconfig.lua_ls.setup {}
 lspconfig.csharp_ls.setup {}
-lspconfig.cssls.setup{}
-lspconfig.html.setup{}
+lspconfig.cssls.setup {}
+lspconfig.html.setup {}
 lspconfig.clangd.setup {}
 lspconfig.gopls.setup {}
 
@@ -17,7 +17,7 @@ lspconfig.emmet_ls.setup {
         html = {
             options = {
             -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-            ["bem.enabled"] = true,
+                ["bem.enabled"] = true,
             },
         },
     }
@@ -28,9 +28,9 @@ require "plugins.utils".add_mappings({
 })
 
 require "plugins.utils".add_mappings({
-    { "lf", vim.diagnostic.open_float, { desc = "LSP diagnostics" } },
-    { "lp", vim.diagnostic.goto_next, { desc = "LSP diagnostics next" } },
-    { "ln", vim.diagnostic.goto_prev, { desc = "LSP diagnostics prev" } },
+    { "df", vim.diagnostic.open_float, { desc = "LSP diagnostics" } },
+    { "dp", vim.diagnostic.goto_next, { desc = "LSP diagnostics next" } },
+    { "dn", vim.diagnostic.goto_prev, { desc = "LSP diagnostics prev" } },
     -- { "<leader>ls", vim.diagnostic.signature_help, { desc = "LSP signature_help" } },
     { "fm", function() vim.lsp.buf.format { async = true } end, { desc = "LSP formatting" } },
     { "ca", vim.lsp.buf.code_action, { desc = "LSP code action" } },
@@ -46,10 +46,10 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = { "clangd", "csharp_ls", "cssls", "html" }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
-  }
+    lspconfig[lsp].setup {
+        -- on_attach = my_custom_on_attach,
+        capabilities = capabilities,
+    }
 end
 
 local luasnip = require "luasnip"

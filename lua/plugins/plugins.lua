@@ -161,6 +161,9 @@ local plugins = {
         end
     },
 
+    {
+        "smithbm2316/centerpad.nvim"
+    }
 }
 
 return plugins

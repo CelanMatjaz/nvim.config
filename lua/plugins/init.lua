@@ -9,6 +9,7 @@ require "plugins.setup.dap"
 
 require "Comment".setup {}
 require "dapui".setup {}
+-- require "centerpad".setup {}
 
 require "plugins.config.mappings" -- Add custom mappings
 
