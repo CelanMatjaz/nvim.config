@@ -79,15 +79,6 @@ local plugins = {
     },
 
     {
-       "lukas-reineke/indent-blankline.nvim", 
-        main = "ibl", 
-        opts = {},
-        config = function(_, opts)
-            require("ibl").setup(opts)
-        end
-    },
-
-    {
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
         dependencies = {
