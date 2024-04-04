@@ -20,10 +20,13 @@ local mappings = {
     { "<C-l>", "<cmd> TmuxNavigateRight <cr>" },
     { "<c-\\>", "<cmd> TmuxNavigatePrevious <cr>" },
 
-    { "<C-n>", "<cmd> NvimTreeToggle <cr> " },
+    { "<C-n>", "<cmd> NvimTreeToggle <cr>" },
 
-    { "<leader>cc", "<cmd> Centerpad <cr> " },
-    { "<leader>cx", "<cmd> Centerpad <cr> " },
+    { "<leader>cc", "<cmd> Centerpad <cr>" },
+    { "<leader>cx", "<cmd> Centerpad <cr>" },
+
+    { "<A-k>", "<cmd> move .-2 <cr>", {} },
+    { "<A-j>", "<cmd> move .+1 <cr>", {} },
 }
 
 require "plugins.utils".add_mappings(mappings)
