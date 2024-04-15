@@ -48,6 +48,8 @@ opt.whichwrap:append "<>[]hl"
 
 vim.g.mapleader = " "
 
+vim.opt.scrolloff = 5
+
 require "plugins.utils".load_mappings()
 
 require "plugins/init"

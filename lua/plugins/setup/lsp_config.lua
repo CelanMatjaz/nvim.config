@@ -28,19 +28,19 @@ require "plugins.utils".add_mappings({
 })
 
 require "plugins.utils".add_mappings({
-    { "df", vim.diagnostic.open_float, { desc = "LSP diagnostics" } },
-    { "dp", vim.diagnostic.goto_next, { desc = "LSP diagnostics next" } },
-    { "dn", vim.diagnostic.goto_prev, { desc = "LSP diagnostics prev" } },
+    { "gf", vim.diagnostic.open_float, { desc = "LSP diagnostics" } },
+    { "gt", vim.diagnostic.goto_next, { desc = "LSP diagnostics next" } },
+    { "gz", vim.diagnostic.goto_prev, { desc = "LSP diagnostics prev" } },
     -- { "<leader>ls", vim.diagnostic.signature_help, { desc = "LSP signature_help" } },
-    { "fm", function() vim.lsp.buf.format { async = true } end, { desc = "LSP formatting" } },
-    { "ca", vim.lsp.buf.code_action, { desc = "LSP code action" } },
+    { "gm", function() vim.lsp.buf.format { async = true } end, { desc = "LSP formatting" } },
+    { "ga", vim.lsp.buf.code_action, { desc = "LSP code action" } },
+    { "gr", vim.lsp.buf.rename, { desc = "LSP rename" } },
     { "<C-space>", vim.lsp.buf.completion, { desc = "LSP code completion" } },
     { "gd", vim.lsp.buf.definition, { desc = "LSP definition" } },
     { "gD", vim.lsp.buf.declaration, { desc = "LSP declaration" } },
-    { "K", vim.lsp.buf.hover, { desc = "LSP hover" } },
     { "gi", vim.lsp.buf.implementation, { desc = "LSP implementation" } },
-    { "D", vim.lsp.buf.hover, { desc = "LSP type definition" } },
-})
+    { "K", vim.lsp.buf.hover, { desc = "LSP type definition" } },
+}, "LSP")
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
