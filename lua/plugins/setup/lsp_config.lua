@@ -9,6 +9,7 @@ lspconfig.cssls.setup {}
 lspconfig.html.setup {}
 lspconfig.clangd.setup {}
 lspconfig.gopls.setup {}
+lspconfig.intelephense.setup{}
 
 lspconfig.emmet_ls.setup {
     apabilities = capabilities,
