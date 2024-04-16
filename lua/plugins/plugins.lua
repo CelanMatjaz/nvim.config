@@ -27,6 +27,9 @@ local plugins = {
         "nvim-treesitter/nvim-treesitter",
         cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
         build = ":TSUpdate",
+        dependencies = {
+            "windwp/nvim-ts-autotag"
+        }
     },
 
     {
