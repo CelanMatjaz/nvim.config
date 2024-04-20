@@ -6,6 +6,7 @@ require "plugins.setup.treesitter"
 require "plugins.setup.bufferline"
 require "plugins.setup.nvim_tree"
 require "plugins.setup.dap"
+require "plugins.setup.null_ls"
 
 require "Comment".setup {}
 require "dapui".setup {}

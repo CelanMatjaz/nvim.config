@@ -82,6 +82,10 @@ local plugins = {
     },
 
     {
+        "nvimtools/none-ls.nvim"
+    },
+
+    {
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
         dependencies = {
