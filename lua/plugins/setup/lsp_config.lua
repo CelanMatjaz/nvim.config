@@ -2,18 +2,16 @@ local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig.emmet_ls.setup {
-    apabilities = capabilities,
-    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
-    init_options = {
-        html = {
-            options = {
-            -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-                ["bem.enabled"] = true,
-            },
-        },
+local lsp_servers = require"plugins.setup.mason".lsp_servers
+
+for index, server in pairs(lsp_servers) do
+    print (server)
+    lspconfig[server].setup {
+        capabilities = capabilities,
+        on_attach = function(client) 
+        end
     }
-}
+end
 
 require "plugins.utils".add_mappings({
     { "<leader>cs", "<cmd> ClangdSwitchSourceHeader <cr>", { desc = "Switch source/header" } },

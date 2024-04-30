@@ -170,6 +170,10 @@ local plugins = {
     {
         "tpope/vim-rails"
     },
+
+    {
+        "mattn/emmet-vim"
+    },
 }
 
 return plugins
