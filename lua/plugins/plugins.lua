@@ -165,7 +165,11 @@ local plugins = {
 
     {
         "smithbm2316/centerpad.nvim"
-    }
+    },
+
+    {
+        "tpope/vim-rails"
+    },
 }
 
 return plugins
