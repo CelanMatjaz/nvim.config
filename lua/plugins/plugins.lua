@@ -166,14 +166,17 @@ local plugins = {
     {
         "smithbm2316/centerpad.nvim"
     },
-
-    {
-        "tpope/vim-rails"
-    },
-
-    {
-        "mattn/emmet-vim"
-    },
 }
+
+function add_plugins_if_executable_exists(executable, plugin_array)
+    if vim.fn.executable(executable) == 1 then
+        for _, plugin in pairs(plugin_array) do
+            table.insert(plugins, plugin)
+        end
+    end
+end
+
+add_plugins_if_executable_exists("rails", { { "tpope/vim-rails" } })
+add_plugins_if_executable_exists("node", { { "mattn/emmet-vim" } })
 
 return plugins

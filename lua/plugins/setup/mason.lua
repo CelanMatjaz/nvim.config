@@ -7,7 +7,7 @@ local lsp_servers = {
     "clangd",
 }
 
-local function check_for_exe_and_append(executable, lsp)
+local function check_for_exe_and_append_if_exists(executable, lsp)
     if vim.fn.executable(executable) == 1 then
         if type(lsp) == "string" then
             table.insert(lsp_servers, lsp)
@@ -16,14 +16,24 @@ local function check_for_exe_and_append(executable, lsp)
                 table.insert(lsp_servers, server)
             end
         end
+    else
+        if type(lsp) == "string" then
+            print("Cannot install lsp server(s) (" .. lsp .. "), no '" .. executable .. "' executable found on system")
+        elseif type(lsp) == "table" then
+            local str = {}
+            for _, server in pairs(lsp) do
+                table.insert(str, server)
+            end            
+            print("Cannot install lsp server(s) (" .. table.concat(str, ", ") .. "), no '" .. executable .. "' executable found on system")
+        end
     end
 end
 
-check_for_exe_and_append("go", "gopls")
-check_for_exe_and_append("dotnet", "csharp_ls")
-check_for_exe_and_append("node", "emmet_ls")
-check_for_exe_and_append("rails", "solargraph")
-check_for_exe_and_append("php", "intelephense")
+check_for_exe_and_append_if_exists("go", "gopls")
+check_for_exe_and_append_if_exists("dotnet", "csharp_ls")
+check_for_exe_and_append_if_exists("node", "emmet_ls")
+check_for_exe_and_append_if_exists("rails", "solargraph")
+check_for_exe_and_append_if_exists("php", "intelephense")
 
 require "mason".setup {}
 require "mason-lspconfig".setup {
