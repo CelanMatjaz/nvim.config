@@ -4,8 +4,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local lsp_servers = require"plugins.setup.mason".lsp_servers
 
-for index, server in pairs(lsp_servers) do
-    print (server)
+for _, server in pairs(lsp_servers) do
     lspconfig[server].setup {
         capabilities = capabilities,
         on_attach = function(client) 
