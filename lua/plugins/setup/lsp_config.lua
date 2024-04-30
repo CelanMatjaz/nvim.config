@@ -2,17 +2,6 @@ local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Server configs
-lspconfig.lua_ls.setup {}
-lspconfig.csharp_ls.setup {}
-lspconfig.cssls.setup {}
-lspconfig.html.setup {}
-lspconfig.clangd.setup {}
-lspconfig.gopls.setup {}
-lspconfig.intelephense.setup{}
-lspconfig.ruby_lsp.setup{}
-lspconfig.emmet_ls.setup{}
-
 lspconfig.emmet_ls.setup {
     apabilities = capabilities,
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
@@ -44,16 +33,6 @@ require "plugins.utils".add_mappings({
     { "gi", vim.lsp.buf.implementation, { desc = "LSP implementation" } },
     { "K", vim.lsp.buf.hover, { desc = "LSP type definition" } },
 }, "LSP")
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local servers = { "clangd", "csharp_ls", "cssls", "html" }
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        -- on_attach = my_custom_on_attach,
-        capabilities = capabilities,
-    }
-end
 
 local luasnip = require "luasnip"
 local cmp = require "cmp"

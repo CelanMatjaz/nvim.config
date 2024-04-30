@@ -78,6 +78,10 @@ local plugins = {
     },
 
     {
+        "williamboman/mason-lspconfig.nvim"
+    },
+
+    {
         "neovim/nvim-lspconfig"
     },
 
