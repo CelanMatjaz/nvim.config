@@ -12,6 +12,7 @@ require "plugins.setup.null_ls"
 require "Comment".setup {}
 require "dapui".setup {}
 
+require "plugins.config.rails_mappings" -- Setup rails mappings
 require "plugins.config.mappings" -- Add custom mappings
 
 require "plugins.setup.which_key" -- Last to load all mappings
