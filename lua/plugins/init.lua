@@ -11,8 +11,12 @@ require "plugins.setup.null_ls"
 
 require "Comment".setup {}
 require "dapui".setup {}
+require "luasnip".setup {}
+require "luasnip.loaders.from_vscode".lazy_load { { paths = { "./snippets/typescriptreact.json" } } }
 
 require "plugins.config.rails_mappings" -- Setup rails mappings
-require "plugins.config.mappings" -- Add custom mappings
+require "plugins.config.mappings"       -- Add custom mappings
 
-require "plugins.setup.which_key" -- Last to load all mappings
+require "plugins.setup.which_key"       -- Last to load all mappings
+
+require "plugins.autocommands" -- Setup autocommands

@@ -6,7 +6,14 @@ local plugins = {
     },
 
     {
-        "nvim-telescope/telescope.nvim", tag = "0.1.5",
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp"
+    },
+
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.5",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
@@ -50,7 +57,7 @@ local plugins = {
         "sekke276/dark_flat.nvim",
         lazy = false,
         init = function(_, opts)
-            vim.cmd[[colorscheme dark_flat]]
+            vim.cmd [[colorscheme dark_flat]]
         end
     },
 
@@ -64,7 +71,7 @@ local plugins = {
 
     {
         "stevearc/oil.nvim",
-        config = function(_, opts) 
+        config = function(_, opts)
             require("oil").setup()
             vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
         end
@@ -165,6 +172,18 @@ local plugins = {
 
     {
         "smithbm2316/centerpad.nvim"
+    },
+
+    {
+        "mattn/emmet-vim"
+    },
+
+    {
+        "rafamadriz/friendly-snippets"
+    },
+
+    {
+        "yioneko/nvim-vtsls"
     },
 }
 
