@@ -1,12 +1,10 @@
-local null_ls = require("null-ls")
+local conform = require "conform"
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-null_ls.setup {
-    sources = {
-        null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.goimports,
-        null_ls.builtins.formatting.clang_format,
-        null_ls.builtins.formatting.sharp_ls,
+conform.setup {
+    formatters_by_ft = {
+        lua = { "stylua" },
+        javascript = { { "prettierd", "prettier" } },
     },
     on_attach = function(client, bufnr)
         vim.api.nvim_clear_autocmds({

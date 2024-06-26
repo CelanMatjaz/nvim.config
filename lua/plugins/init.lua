@@ -1,13 +1,12 @@
 require "plugins.setup.lazy"
 require "plugins.setup.lualine"
 require "plugins.setup.telescope"
-require "plugins.setup.mason"
 require "plugins.setup.lsp_config"
 require "plugins.setup.treesitter"
 require "plugins.setup.bufferline"
 require "plugins.setup.nvim_tree"
 require "plugins.setup.dap"
-require "plugins.setup.null_ls"
+require "plugins.setup.conform"
 
 require "Comment".setup {}
 require "dapui".setup {}

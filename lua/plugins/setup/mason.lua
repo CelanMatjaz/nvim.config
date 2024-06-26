@@ -43,7 +43,7 @@ end
 
 -- TODO: Move custom configs to their own files
 check_for_exe_and_append("go", { "gopls" })
-check_for_exe_and_append("dotnet", { "csharp_ls" })
+check_for_exe_and_append("dotnet", { "csharp_ls", "omnisharp_mono" })
 check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", {
     name = "vtsls",
     custom_config = {
