@@ -55,6 +55,7 @@ check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", {
 } })
 check_for_exe_and_append("rails", { "solargraph" })
 check_for_exe_and_append("php", { "intelephense" })
+check_for_exe_and_append("zig", { "zls" })
 
 require "mason".setup {}
 require "mason-lspconfig".setup {
