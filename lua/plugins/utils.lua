@@ -13,7 +13,10 @@ utils.add_mappings = function(mappings, plugin)
     end
 
     for _, m in pairs(mappings) do
-        utils.whichKeyMappings[m[1]] = { m[3] }
+        if m[3] ~= nil then
+            table.insert(utils.whichKeyMappings, { m[1], desc = m[3].desc })
+        end
+
         utils.mappings[m[1]] = { m[2], m[3], m[4] }
     end
 end
@@ -26,7 +29,7 @@ utils.load_mappings = function()
                 modes = mapping[3]
             end
 
-            vim.keymap.set(modes, cmd, mapping[1], mapping[2])
+            vim.keymap.set(modes, cmd, mapping[1])
         end
     end)
 end
