@@ -33,6 +33,7 @@ local plugins = {
         config = function(_, opts)
             require("which-key").setup(opts)
         end,
+        dependencies = {"nvim-tree/nvim-web-devicons", "echasnovski/mini.icons"}
     },
 
     {
