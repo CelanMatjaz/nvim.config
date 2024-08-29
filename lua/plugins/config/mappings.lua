@@ -8,12 +8,12 @@ local mappings = {
 
     { "<C-c>", "<esc>", { desc = "Exit to normal mode" } , "i"},
     { "<C-s>", "<cmd> w <cr>", { desc = "Save buffer" } },
-    
+
     { "<C-h>", "<Left>", {}, "i" },
     { "<C-l>", "<Right>", {}, "i" },
     { "<C-j>", "<Down>", {}, "i" },
     { "<C-k>", "<Up>", {}, "i" },
-    
+
     { "<C-h>", "<cmd> TmuxNavigateLeft <cr>", { desc = "Tmux navigate left" } },
     { "<C-j>", "<cmd> TmuxNavigateDown <cr>", { desc = "Tmux navigate down" } },
     { "<C-k>", "<cmd> TmuxNavigateUp <cr>", { desc = "Tmux navigate up" } },
@@ -28,9 +28,9 @@ local mappings = {
     { "<A-k>", "<cmd> move .-2 <cr>", {} },
     { "<A-j>", "<cmd> move .+1 <cr>", {} },
 
-    { "gn", vim.diagnostic.goto_next, { desc = "LSP diagnostics go to next" }, { "i", "v" } },
-    { "gN", vim.diagnostic.goto_next, { desc = "LSP diagnostics go to prev" }, { "i", "v" } },
-    
+    { "gn", function() vim.diagnostic.goto_next() end, { desc = "LSP diagnostics go to next" }, "n" },
+    { "gN", function() vim.diagnostic.goto_prev() end, { desc = "LSP diagnostics go to prev" }, "n" },
+
     { "<leader>bo", "<cmd> BufferLineCloseOthers <cr>", { desc = "Close all other buffers from bufferline" } },
 }
 
