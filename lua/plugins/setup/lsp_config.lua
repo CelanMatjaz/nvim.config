@@ -20,10 +20,14 @@ require "plugins.utils".add_mappings({
     { "<leader>cs", "<cmd> ClangdSwitchSourceHeader <cr>", { desc = "Switch source/header" } },
 })
 
+function toggleVirtualText()
+    vim.diagnostic.config { virtual_text = not vim.diagnostic.config().virtual_text }
+end
+
 require "plugins.utils".add_mappings({
     { "gf",        vim.diagnostic.open_float,                          { desc = "LSP diagnostics" } },
-    { "gt",        vim.diagnostic.goto_next,                           { desc = "LSP diagnostics next" } },
-    { "gz",        vim.diagnostic.goto_prev,                           { desc = "LSP diagnostics prev" } },
+    { "gn",        vim.diagnostic.goto_next,                           { desc = "LSP diagnostics next" } },
+    { "gN",        vim.diagnostic.goto_prev,                           { desc = "LSP diagnostics prev" } },
     -- { "<leader>ls", vim.diagnostic.signature_help, { desc = "LSP signature_help" } },
     { "gm",        function() vim.lsp.buf.format { async = true } end, { desc = "LSP formatting" } },
     { "ga",        vim.lsp.buf.code_action,                            { desc = "LSP code action" } },
@@ -33,6 +37,7 @@ require "plugins.utils".add_mappings({
     { "gD",        vim.lsp.buf.declaration,                            { desc = "LSP declaration" } },
     { "gi",        vim.lsp.buf.implementation,                         { desc = "LSP implementation" } },
     { "K",         vim.lsp.buf.hover,                                  { desc = "LSP type definition" } },
+    { "gt",        toggleVirtualText,                                  { desc = "LSP toggle virtual text" } }
 }, "LSP")
 
 local luasnip = require "luasnip"

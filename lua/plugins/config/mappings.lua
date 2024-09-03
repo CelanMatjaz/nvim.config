@@ -28,9 +28,6 @@ local mappings = {
     { "<A-k>", "<cmd> move .-2 <cr>", {} },
     { "<A-j>", "<cmd> move .+1 <cr>", {} },
 
-    { "gn", function() vim.diagnostic.goto_next() end, { desc = "LSP diagnostics go to next" }, "n" },
-    { "gN", function() vim.diagnostic.goto_prev() end, { desc = "LSP diagnostics go to prev" }, "n" },
-
     { "<leader>bo", "<cmd> BufferLineCloseOthers <cr>", { desc = "Close all other buffers from bufferline" } },
 }
 
