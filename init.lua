@@ -51,3 +51,5 @@ vim.g.mapleader = " "
 require "plugins.utils".load_mappings()
 
 require "plugins/init"
+
+vim.g.background= "dark"
