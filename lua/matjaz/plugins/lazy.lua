@@ -5,13 +5,10 @@ if not vim.loop.fs_stat(lazypath) then
         "clone",
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
+        "--branch=stable",
         lazypath,
     })
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require "plugins.plugins"
-local opts = {}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup(require "matjaz.plugins.plugins")

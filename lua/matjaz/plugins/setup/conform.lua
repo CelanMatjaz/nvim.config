@@ -1,5 +1,4 @@
 local conform = require "conform"
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 conform.setup {
     formatters_by_ft = {
@@ -7,6 +6,7 @@ conform.setup {
         javascript = { { "prettierd", "prettier" } },
     },
     on_attach = function(client, bufnr)
+        local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
         vim.api.nvim_clear_autocmds({
             group = augroup,
             buffer = bufnr
@@ -14,7 +14,7 @@ conform.setup {
         vim.api.nvim_create_autocmd("BufWritePre", {
             group = augroup,
             buffer = bufnr,
-            callback = function() 
+            callback = function()
                 vim.lsp.buf.format({ bufnr = bufnr })
             end
         })
