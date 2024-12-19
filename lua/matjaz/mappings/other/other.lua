@@ -3,5 +3,6 @@ local function toggle_wrap()
 end
 
 require "matjaz.mappings.set".set_mappings({
-    { "tw", toggle_wrap, desc = "Toggle wrap" },
+    { "tw", toggle_wrap,         desc = "Toggle wrap" },
+    { "ts", "<cmd> source <cr>", desc = "Source" },
 })

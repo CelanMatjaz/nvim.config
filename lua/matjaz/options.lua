@@ -45,3 +45,5 @@ vim.opt.laststatus = 3
 vim.opt.showmode = false
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'

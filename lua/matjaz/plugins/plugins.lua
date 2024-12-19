@@ -5,7 +5,7 @@ local plugins = {
     { "christoomey/vim-tmux-navigator" },
     { 'stevearc/conform.nvim',         opts = {}, },
 
-    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", 'nvim-neotest/nvim-nio' } },
+    { "rcarriga/nvim-dap-ui",          dependencies = { "mfussenegger/nvim-dap", 'nvim-neotest/nvim-nio' } },
 
     {
         "nvim-telescope/telescope.nvim",
@@ -16,7 +16,7 @@ local plugins = {
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
-        keys = { "<leader>", "<c-r>", "<c-w>", "\"", "'", "`", "c", "v", "g" },
+        keys = { "<leader>", "<c-r>", "<c-w>", "\"", "'", "`", "c", "v", "g", "t" },
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons", "echasnovski/mini.icons" }
     },
@@ -107,6 +107,11 @@ local plugins = {
         config = function()
             require "Comment".setup {}
         end
+    },
+
+    {
+        "nanozuki/tabby.nvim",
+        dependencies = 'nvim-tree/nvim-web-devicons',
     },
 }
 
