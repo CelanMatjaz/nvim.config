@@ -113,6 +113,14 @@ local plugins = {
         "nanozuki/tabby.nvim",
         dependencies = 'nvim-tree/nvim-web-devicons',
     },
+
+    {
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = { "LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" },
+        dependencies = { "nvim-lua/plenary.nvim", },
+        keys = { { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" } }
+    }
 }
 
 local function add_plugins_if_executables_exist(executables, plugin_array)

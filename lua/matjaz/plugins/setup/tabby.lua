@@ -6,6 +6,7 @@ local theme = {
     win = 'TabLine',
     tail = 'TabLine',
 }
+
 require('tabby').setup({
     line = function(line)
         return {
@@ -26,7 +27,6 @@ require('tabby').setup({
             line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
                 return {
                     line.sep(' ', theme.win, theme.fill),
-                    win.is_current() and ' ' or ' ',
                     win.buf_name(),
                     line.sep(' ', theme.win, theme.fill),
                     hl = theme.win,

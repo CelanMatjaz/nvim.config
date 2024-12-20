@@ -3,8 +3,8 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 vim.g.background = "dark"
 
-require "matjaz.options"
 require "matjaz.plugins"
+require "matjaz.options"
 require "matjaz.mappings"
 require "matjaz.autocommands"
 
