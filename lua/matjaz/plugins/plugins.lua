@@ -1,6 +1,7 @@
 local plugins = {
     { "nvim-tree/nvim-web-devicons" },
     { "akinsho/bufferline.nvim" },
+    { "tiagovla/scope.nvim", init = function() require("scope").setup({}) end },
     { "nvim-lualine/lualine.nvim" },
     { "christoomey/vim-tmux-navigator" },
     { 'stevearc/conform.nvim',         opts = {}, },
