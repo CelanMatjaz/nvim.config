@@ -4,6 +4,7 @@ local lsp_servers = {
     "clangd",
     "jsonls",
     "pyright",
+    "glsl_analyzer",
 }
 
 local ensure_installed_lsp_servers = {}
