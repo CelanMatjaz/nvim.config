@@ -1,7 +1,7 @@
 local plugins = {
     { "nvim-tree/nvim-web-devicons" },
     { "akinsho/bufferline.nvim" },
-    { "tiagovla/scope.nvim", init = function() require("scope").setup({}) end },
+    { "tiagovla/scope.nvim",           init = function() require("scope").setup({}) end },
     { "nvim-lualine/lualine.nvim" },
     { "christoomey/vim-tmux-navigator" },
     { 'stevearc/conform.nvim',         opts = {}, },
@@ -97,9 +97,7 @@ local plugins = {
     {
         "folke/trouble.nvim",
         config = function()
-            require("trouble").setup {
-                icons = false,
-            }
+            require("trouble").setup {}
         end
     },
 
