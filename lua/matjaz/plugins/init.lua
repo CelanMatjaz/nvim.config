@@ -7,6 +7,7 @@ require "matjaz.plugins.setup.lsp_config"
 require "matjaz.plugins.setup.treesitter"
 require "matjaz.plugins.setup.bufferline"
 require "matjaz.plugins.setup.conform"
+require "matjaz.plugins.setup.gitsigns"
 -- require "matjaz.plugins.setup.tabby"
 
 require "luasnip".setup {}

@@ -35,7 +35,7 @@ end
 
 check_for_exe_and_append("go", { "gopls" })
 check_for_exe_and_append("dotnet", { "csharp_ls" })
-check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", {
+check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", "svelte", {
     name = "vtsls",
     custom_config = {
         refactor_auto_rename = true,
@@ -47,6 +47,7 @@ check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", {
 check_for_exe_and_append("rails", { "solargraph" })
 check_for_exe_and_append("php", { "intelephense" })
 check_for_exe_and_append("zig", { "zls" })
+check_for_exe_and_append("dart", { "dartls" })
 
 append({
     name = "lua_ls",
