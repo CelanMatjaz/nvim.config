@@ -29,6 +29,7 @@ vim.opt.timeoutlen = 400
 vim.opt.updatetime = 250
 
 vim.opt.undofile = true
+vim.opt.fileformats = "unix,dos,mac"
 
 -- Text wrapping
 vim.opt.smartindent = true

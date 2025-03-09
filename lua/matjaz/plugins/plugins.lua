@@ -123,7 +123,16 @@ local plugins = {
 
     {
         "lewis6991/gitsigns.nvim",
-    }
+    },
+
+    {
+        "kylechui/nvim-surround",
+        version = "*",
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+    },
 }
 
 local function add_plugins_if_executables_exist(executables, plugin_array)

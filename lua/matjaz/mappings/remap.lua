@@ -24,4 +24,7 @@ require "matjaz.mappings.set".set_mappings({
     { "<A-j>",      "<cmd> move .+1 <cr>", },
 
     { "<leader>bo", "<cmd> BufferLineCloseOthers <cr>", desc = "Close all other buffers" },
+
+    { "<CA-j>",     "<S-}>",                            mode = { "i", "n" } },
+    { "<CA-k>",     "<S-{>",                            mode = { "i", "n" } },
 })

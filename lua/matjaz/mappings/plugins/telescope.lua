@@ -6,4 +6,5 @@ require "matjaz.mappings.set".set_mappings({
     { "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <cr>", desc = "Find in current buffer" },
     { "<leader>fs", "<cmd> Telescope lsp_document_symbols <cr>",      desc = "Find symbols in current buffer" },
     { "<leader>fa", "<cmd> Telescope treesitter <cr>",                desc = "Find symbols in current buffer" },
+    { "<leader>fm", "<cmd> Telescope marks <cr>",                     desc = "Find marks" },
 })
