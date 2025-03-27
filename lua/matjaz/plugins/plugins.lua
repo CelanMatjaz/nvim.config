@@ -42,7 +42,7 @@ local plugins = {
     {
         "stevearc/oil.nvim",
         config = function(_, _)
-            require("oil").setup({ view_options = { show_hidden = true } })
+            require("oil").setup({ view_options = { show_hidden = true }, columns = { "icon", "size", "mtime" } })
             vim.keymap.set("n", "-", "<CMD>Oil<CR>")
         end
     },

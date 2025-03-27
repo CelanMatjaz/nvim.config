@@ -5,6 +5,7 @@ local lsp_servers = {
     "jsonls",
     "pyright",
     "glsl_analyzer",
+    "rust_analyzer",
 }
 
 local ensure_installed_lsp_servers = {}
@@ -48,6 +49,7 @@ check_for_exe_and_append("rails", { "solargraph" })
 check_for_exe_and_append("php", { "intelephense" })
 check_for_exe_and_append("zig", { "zls" })
 check_for_exe_and_append("dart", { "dartls" })
+check_for_exe_and_append("cmake", { "neocmake" })
 
 append({
     name = "lua_ls",

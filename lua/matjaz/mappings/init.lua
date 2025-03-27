@@ -6,6 +6,7 @@ require "matjaz.mappings.plugins.lsp"
 require "matjaz.mappings.plugins.telescope"
 require "matjaz.mappings.plugins.dap"
 require "matjaz.mappings.plugins.trouble"
+require "matjaz.mappings.plugins.gitsigns"
 
 -- Other
 require "matjaz.mappings.other.rails"
