@@ -1,6 +1,6 @@
 require "matjaz.mappings.set".set_mappings({
     { "<C-b>",      "<cmd> enew <cr>", },
-    { "<C-x>",      "<cmd> bd <cr>", },
+    { "<C-x>",      "<cmd> bdelete <cr>", },
     { "<C-X>",      "<cmd> bunload <cr>", },
 
     { "<tab>",      "<cmd> bnext <cr>", },

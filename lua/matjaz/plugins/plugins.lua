@@ -133,6 +133,14 @@ local plugins = {
             require("nvim-surround").setup({})
         end
     },
+
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function(_, _)
+            require("todo-comments").setup {}
+        end
+    }
 }
 
 local function add_plugins_if_executables_exist(executables, plugin_array)
