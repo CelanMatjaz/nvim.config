@@ -9,6 +9,7 @@ require "matjaz.plugins.setup.bufferline"
 require "matjaz.plugins.setup.conform"
 require "matjaz.plugins.setup.gitsigns"
 -- require "matjaz.plugins.setup.tabby"
+require "matjaz.plugins.setup.todo_comments"
 
 require "luasnip".setup {}
 -- require "dap".setup {}

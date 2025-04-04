@@ -34,8 +34,18 @@ local plugins = {
     {
         "sekke276/dark_flat.nvim",
         lazy = false,
+        -- init = function(_, _)
+        --     vim.cmd [[colorscheme dark_flat]]
+        -- end
+    },
+
+    {
+        "bluz71/vim-moonfly-colors",
+        name = "moonfly",
+        lazy = false,
+        priority = 1000,
         init = function(_, _)
-            vim.cmd [[colorscheme dark_flat]]
+            vim.cmd [[colorscheme habamax]]
         end
     },
 
@@ -137,9 +147,6 @@ local plugins = {
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-        config = function(_, _)
-            require("todo-comments").setup {}
-        end
     }
 }
 

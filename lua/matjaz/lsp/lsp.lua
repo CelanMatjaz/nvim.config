@@ -36,7 +36,7 @@ end
 
 check_for_exe_and_append("go", { "gopls" })
 check_for_exe_and_append("dotnet", { "csharp_ls" })
-check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "tsserver", "svelte", {
+check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "ts_ls", "svelte", {
     name = "vtsls",
     custom_config = {
         refactor_auto_rename = true,
