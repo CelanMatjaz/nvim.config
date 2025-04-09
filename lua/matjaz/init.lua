@@ -7,8 +7,9 @@ require "matjaz.plugins"
 require "matjaz.options"
 require "matjaz.mappings"
 require "matjaz.autocommands"
+require "matjaz.snippets.utils"
 
-local float_config = { bg = "#202020" }
+local float_config = { bg = "#232323" }
 vim.api.nvim_set_hl(0, "FloatBorder", float_config)
 vim.api.nvim_set_hl(0, "NormalFloat", float_config)
 vim.api.nvim_set_hl(0, "TelescopeNormal", float_config)
@@ -19,3 +20,5 @@ vim.api.nvim_set_hl(0, "LineNrAbove", line_numbers)
 vim.api.nvim_set_hl(0, "LineNrBelow", line_numbers)
 
 vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#9191AA" })
+
+vim.cmd [[colorscheme archery]]

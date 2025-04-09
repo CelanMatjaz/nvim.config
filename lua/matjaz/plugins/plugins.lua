@@ -34,9 +34,6 @@ local plugins = {
     {
         "sekke276/dark_flat.nvim",
         lazy = false,
-        -- init = function(_, _)
-        --     vim.cmd [[colorscheme dark_flat]]
-        -- end
     },
 
     {
@@ -44,9 +41,10 @@ local plugins = {
         name = "moonfly",
         lazy = false,
         priority = 1000,
-        init = function(_, _)
-            vim.cmd [[colorscheme habamax]]
-        end
+    },
+
+    {
+        "Badacadabra/vim-archery",
     },
 
     {
@@ -147,7 +145,20 @@ local plugins = {
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-    }
+    },
+
+    -- Testing out plugins
+
+    {
+        "toppair/peek.nvim",
+        event = { "VeryLazy" },
+        build = "deno task --quiet build:fast",
+        config = function()
+            require("peek").setup({ app = "browser" })
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        end,
+    },
 }
 
 local function add_plugins_if_executables_exist(executables, plugin_array)

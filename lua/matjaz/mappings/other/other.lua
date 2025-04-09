@@ -38,12 +38,11 @@ function TestIsThis()
 end
 
 require "matjaz.mappings.set".set_mappings({
-    { "tw", toggle_wrap,           desc = "Toggle wrap" },
-    { "ts", "<cmd> source % <cr>", desc = "Source" },
-    { "tw",          toggle_wrap,           desc = "Toggle wrap" },
-    { "ts",          "<cmd> source % <cr>", desc = "Source" },
-    { "<leader>gsr", rename_to_snake_case,  desc = "Rename symbol to snake case globaly" },
-    { "<leader>gsv", TestIsThis,            desc = "Rename symbol to snake case globaly" },
+    { "tw",          toggle_wrap,                                 desc = "Toggle wrap" },
+    { "<leader>ss",  "<cmd> source % <cr>",                       desc = "Source current file" },
+    { "<leader>sS",  "<cmd> source ~/.config/nvim/init.lua <cr>", desc = "Source config" },
+    { "<leader>gsr", rename_to_snake_case,                        desc = "Rename symbol to snake case globaly" },
+    { "<leader>gsv", TestIsThis,                                  desc = "Rename symbol to snake case globaly" },
 })
 
 function GetSymbolUnderCursor()
