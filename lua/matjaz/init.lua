@@ -7,7 +7,11 @@ require "matjaz.plugins"
 require "matjaz.options"
 require "matjaz.mappings"
 require "matjaz.autocommands"
+
+-- Snippets
 require "matjaz.snippets.utils"
+require "matjaz.snippets.go"
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local float_config = { bg = "#232323" }
 vim.api.nvim_set_hl(0, "FloatBorder", float_config)
@@ -22,3 +26,4 @@ vim.api.nvim_set_hl(0, "LineNrBelow", line_numbers)
 vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#9191AA" })
 
 vim.cmd [[colorscheme archery]]
+vim.opt.guicursor = "n-v-c-sm:block"
