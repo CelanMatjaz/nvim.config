@@ -2,11 +2,13 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 vim.g.background = "dark"
+vim.g.loaded_matchparen = 1
 
 require "matjaz.plugins"
 require "matjaz.options"
 require "matjaz.mappings"
 require "matjaz.autocommands"
+require "matjaz.commands"
 
 -- Snippets
 require "matjaz.snippets.utils"
