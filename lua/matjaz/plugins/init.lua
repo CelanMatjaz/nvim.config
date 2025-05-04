@@ -8,9 +8,8 @@ require "matjaz.plugins.setup.treesitter"
 require "matjaz.plugins.setup.bufferline"
 require "matjaz.plugins.setup.conform"
 require "matjaz.plugins.setup.gitsigns"
--- require "matjaz.plugins.setup.tabby"
 require "matjaz.plugins.setup.todo_comments"
+require "matjaz.plugins.setup.dap"
+-- require "matjaz.plugins.setup.tabby"
 
 require "luasnip".setup {}
--- require "dap".setup {}
--- require "dapui".setup {}
