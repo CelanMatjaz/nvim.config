@@ -200,6 +200,14 @@ local plugins = {
 			end,
 		}
 	},
+
+
+	{
+		"ggandor/leap.nvim",
+		dependencies = {
+			"tpope/vim-repeat"
+		}
+	},
 }
 
 local function add_plugins_if_executables_exist(executables, plugin_array)

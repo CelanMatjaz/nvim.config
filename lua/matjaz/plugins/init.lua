@@ -13,3 +13,5 @@ require "matjaz.plugins.setup.dap"
 -- require "matjaz.plugins.setup.tabby"
 
 require "luasnip".setup {}
+
+require('leap').set_default_mappings()

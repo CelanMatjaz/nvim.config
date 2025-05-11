@@ -29,3 +29,6 @@ vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#9191AA" })
 
 vim.cmd [[colorscheme archery]]
 vim.opt.guicursor = "n-v-c-sm:block"
+
+vim.bo.formatexpr = ""
+vim.bo.formatprg = "jq"
