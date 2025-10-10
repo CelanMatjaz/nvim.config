@@ -1,14 +1,5 @@
 require "matjaz.mappings.remap"
-
--- Plugins
-require "matjaz.mappings.plugins.luasnip"
-require "matjaz.mappings.plugins.lsp"
-require "matjaz.mappings.plugins.telescope"
-require "matjaz.mappings.plugins.dap"
-require "matjaz.mappings.plugins.trouble"
-require "matjaz.mappings.plugins.gitsigns"
-require "matjaz.mappings.plugins.rest"
-require "matjaz.mappings.plugins.db"
+require "matjaz.mappings.lsp"
 
 -- Other
 require "matjaz.mappings.other.rails"

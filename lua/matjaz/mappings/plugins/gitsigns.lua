@@ -1,4 +1,4 @@
-local gitsigns = require "gitsigns"
+local gitsigns = require "lua.matjaz.plugins.configs.gitsigns"
 
 require "matjaz.mappings.set".set_mappings({
 	{ "<leader>gb", gitsigns.toggle_current_line_blame, desc = "Gitsigns toggle current line blame" },

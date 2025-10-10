@@ -38,7 +38,7 @@ check_for_exe_and_append("dart", { "dartls" })
 check_for_exe_and_append("cmake", { "neocmake" })
 check_for_exe_and_append("node", { "cssls", "html", "jsonls" })
 check_for_exe_and_append("python", { "pyright" })
-check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "ts_ls", "svelte" })
+check_for_exe_and_append("node", { "emmet_ls", "tailwindcss", "ts_ls" })
 
 append({
 	name = "lua_ls",

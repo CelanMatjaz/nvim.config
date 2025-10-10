@@ -1,4 +1,4 @@
-local ls = require "luasnip"
+local ls = require "lua.matjaz.plugins.configs.luasnip"
 
 require "matjaz.mappings.set".set_mappings({
     { "<C-K>", function() ls.expand() end,                                        desc = "Snippet expand",        mode = { "i" } },
