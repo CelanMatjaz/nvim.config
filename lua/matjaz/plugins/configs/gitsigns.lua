@@ -15,7 +15,7 @@ return {
 		require "matjaz.mappings.set".set_mappings({
 			{ "<leader>gd",gitsigns.diffthis,                    mode = "n", desc = "Diff this buffer" },
 			{ "<leader>gw",gitsigns.toggle_word_diff,            mode = "n", desc = "Toggle word diff" },
-			{ "<leader>gb",gitsigns.toggle_current_line_blame,   mode = "n", desc = "Toggle line blame" },
+			{ "<leader>gbl",gitsigns.toggle_current_line_blame,   mode = "n", desc = "Toggle line blame" },
 			{ "<leader>ghs",gitsigns.stage_hunk,                 mode = "n", desc = "Stage hunk" },
 			{ "<leader>ghr",gitsigns.reset_hunk,                 mode = "n", desc = "Reset hunk" },
 			{ "<leader>ghn",goto_next_hunk,      	           mode = "n", desc = "Go to next hunk" },

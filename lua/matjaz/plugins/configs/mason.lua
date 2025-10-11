@@ -13,7 +13,7 @@ return {
 		require "mason".setup (opts)
 		require "mason-lspconfig".setup {
 			function(server_name)
-				require "lspconfig"[server_name].setup {
+				vim.lsp.config {
 					capabilities = require "cmp_nvim_lsp".default_capabilities(),
 					on_attach = function(client) end
 				}
