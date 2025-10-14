@@ -5,6 +5,7 @@ return {
 
 	require "matjaz.plugins.configs.bufferline",
 	require "matjaz.plugins.configs.cmp",
+	require "matjaz.plugins.configs.clangd_extensions",
 	require "matjaz.plugins.configs.comment",
 	require "matjaz.plugins.configs.conform",
 	require "matjaz.plugins.configs.gitsigns",

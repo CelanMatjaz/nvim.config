@@ -14,7 +14,7 @@ require "matjaz.mappings.set".set_mappings({
 	{ "gf",        vim.diagnostic.open_float,  { desc = "LSP diagnostics" } },
 	{ "gn",        vim.diagnostic.goto_next,   { desc = "LSP diagnostics next" } },
 	{ "gN",        vim.diagnostic.goto_prev,   { desc = "LSP diagnostics prev" } },
-	{ "gm",        format,                     { desc = "LSP formatting" } },
+	{ "gm",        format,                     { desc = "LSP formatting" },         mode = { "v", "n" } },
 	{ "ga",        vim.lsp.buf.code_action,    { desc = "LSP code action" },        mode = { "v", "n" } },
 	{ "gr",        vim.lsp.buf.rename,         { desc = "LSP rename" } },
 	{ "<C-space>", vim.lsp.buf.completion,     { desc = "LSP code completion" } },
