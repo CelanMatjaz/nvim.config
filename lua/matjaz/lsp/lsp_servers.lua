@@ -1,5 +1,4 @@
 local lsp_servers = {
-	"clangd",
 	"glsl_analyzer",
 }
 
@@ -64,6 +63,23 @@ append({
 		settings = {
 			Lua = {}
 		}
+	}
+})
+
+append({
+	name = "clangd",
+	custom_config = {
+		cmd = {
+			"clangd",
+			"--log=verbose",          -- Detailed logs (shown in :LspLog)
+			"--pretty",               -- Pretty-print logs
+			"--all-scopes-completion", -- Better autocompletion
+			"--completion-style=detailed", -- Show return types & parameters
+			"--header-insertion=never", -- Don’t auto-insert includes
+			"--query-driver=/usr/bin/clang*", -- Match your compiler
+			"--clang-tidy",           -- Enable clang-tidy checks
+			"--offset-encoding=utf-16", -- Fix offset errors in some clients
+		},
 	}
 })
 

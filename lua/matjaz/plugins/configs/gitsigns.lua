@@ -4,11 +4,11 @@ return {
 		local gitsigns = require "gitsigns"
 
 		local function goto_next_hunk()
-			gitsigns.reset_hunk("next")
+			gitsigns.nav_hunk("next")
 		end
 
 		local function goto_prev_hunk()
-			gitsigns.reset_hunk("prev")
+			gitsigns.nav_hunk("prev")
 		end
 
 		gitsigns.setup {}
