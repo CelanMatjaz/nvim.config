@@ -20,6 +20,5 @@ return {
 	require "matjaz.plugins.configs.telescope",
 	require "matjaz.plugins.configs.todo_comments",
 	require "matjaz.plugins.configs.trouble",
-	require "matjaz.plugins.configs.treesitter",
 	require "matjaz.plugins.configs.which_key",
 }
