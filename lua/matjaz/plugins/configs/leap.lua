@@ -6,9 +6,9 @@ return {
 		leap.setup {}
 
 		require "matjaz.mappings.set".set_mappings({
-			{ "s", "<Plug>(leap-forward)", { desc = "Leap" }, mode = { 'n', 'x', 'o' } },
-			{ "S", "<Plug>(leap-backward)", { desc = "Leap" }, mode = { 'n', 'x', 'o' } },
-			{ "gs", "<Plug>(leap-from-window)", { desc = "Leap" }, mode = { 'n', 'x', 'o' } },
+			{ "s",  "<Plug>(leap-forward)",     desc = "Leap", mode = { 'n', 'x', 'o' } },
+			{ "S",  "<Plug>(leap-backward)",    desc = "Leap", mode = { 'n', 'x', 'o' } },
+			{ "gs", "<Plug>(leap-from-window)", desc = "Leap", mode = { 'n', 'x', 'o' } },
 		})
 	end
 }

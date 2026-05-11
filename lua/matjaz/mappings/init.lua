@@ -1,4 +1,4 @@
-require "matjaz.mappings.remap"
+require "matjaz.mappings.custom"
 require "matjaz.mappings.lsp"
 
 -- Other
