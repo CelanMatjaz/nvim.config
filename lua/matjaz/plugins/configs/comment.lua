@@ -1,6 +1,1 @@
-return {
-		"numToStr/Comment.nvim",
-		config = function()
-			require "Comment".setup {}
-		end
-	}
+return { 'nvim-mini/mini.comment', version = '*' }

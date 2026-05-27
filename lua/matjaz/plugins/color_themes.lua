@@ -15,4 +15,7 @@ return {
 		priority = 1000,
 	},
 
+	{
+		"https://github.com/catppuccin/nvim"
+	},
 }
