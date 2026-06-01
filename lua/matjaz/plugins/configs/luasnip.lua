@@ -10,12 +10,17 @@ return {
 	version = "v2.3",
 	build = "make install_jsregexp",
 	config = function(_, _)
-		local luasnip = require "luasnip"
+		local ls = require "luasnip"
+		ls.setup {}
+
 		require "matjaz.mappings.set".set_mappings({
-			{ "<C-K>", function() luasnip.expand() end, desc = "Snippet expand",        mode = { "i" } },
-			{ "<C-L>", function() luasnip.jump(1) end,  desc = "Snippet jump forward",  mode = { "i", "s" } },
-			{ "<C-J>", function() luasnip.jump(-1) end, desc = "Snippet jump backward", mode = { "i", "s" } },
-			{ "<C-E>", change_choice,                   desc = "Snippet change",        mode = { "i", "s" } },
+			{ "<C-K>", function() ls.expand() end, desc = "Snippet expand",        mode = { "i" } },
+			{ "<C-L>", function() ls.jump(1) end,  desc = "Snippet jump forward",  mode = { "i", "s" } },
+			{ "<C-J>", function() ls.jump(-1) end, desc = "Snippet jump backward", mode = { "i", "s" } },
+			{ "<C-E>", change_choice,              desc = "Snippet change",        mode = { "i", "s" } },
 		})
+
+		require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/lua/matjaz/snippets" })
 	end
+
 }
