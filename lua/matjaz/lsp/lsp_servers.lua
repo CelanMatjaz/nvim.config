@@ -79,6 +79,7 @@ append({
 			"--query-driver=/usr/bin/clang*", -- Match your compiler
 			"--clang-tidy",           -- Enable clang-tidy checks
 			"--offset-encoding=utf-16", -- Fix offset errors in some clients
+			"--compile-commands-dir=."
 		},
 	}
 })

@@ -20,7 +20,8 @@ return {
 			{ "<C-E>", change_choice,              desc = "Snippet change",        mode = { "i", "s" } },
 		})
 
-		require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/lua/matjaz/snippets" })
+		require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/lua/matjaz/snippets/default" })
+		require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/lua/matjaz/snippets/custom" })
 	end
 
 }
